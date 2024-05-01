@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-black">
+    <div
+      class="sidebar fixed top-0 bottom-0 lg:left-0 w-[300px] overflow-y-auto bg-gray-900"
+    >
+      <div class="text-gray-900 text-xl">
+        <div class="p-5 flex items-center bg-gray-600 gap-10">
+          <div class="flex">
+            <img src="Vector.png" alt="" />
+            <h1 class="font-bold text-gray-200 text-[30px] ml-3">Logoipsum</h1>
+          </div>
+          <div><i class="fa-solid fa-ellipsis-vertical"></i></div>
+        </div>
+      </div>
+      <div class="text-white mt-10 ps-9">MAIN</div>
+      <div class="flex items-center ps-9 mt-6 gap-4">
+        <i class="fa-solid fa-house" style="color: #f2f1f3"></i>
+        <div class="text-white text-[20px]">Dashboard</div>
+      </div>
+      <div class="flex items-center ps-9 mt-6 gap-4">
+        <i class="fa-solid fa-user" style="color: #f7f7f7"></i>
+        <div class="text-white text-[20px]">Audience</div>
+      </div>
+      <div class="flex items-center ps-9 mt-6 gap-4">
+        <i class="fa-solid fa-file-invoice" style="color: #f9fafb"></i>
+        <div class="text-white text-[20px]">Posts</div>
+      </div>
+      <div class="flex items-center ps-9 mt-6 gap-4">
+        <i class="fa-solid fa-calendar-days" style="color: #fafafa"></i>
+        <div class="text-white text-[20px]">Schedules</div>
+      </div>
+      <!--  -->
+      <div
+        class="p-2.5 ps-9 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-400 text-white"
+        onclick="dropdown()"
+      >
+        <i class="fa-solid fa-money-bill" style="color: #f9fafa"></i>
+        <div class="flex justify-between w-full items-center">
+          <span class="text-[20px] ml-4 text-gray-200">Income</span>
+          <span class="text-sm rotate-180" id="arrow"></span>
+          <i class="fa-solid fa-chevron-down" style="color: #f7f7f8"></i>
+        </div>
+      </div>
+      <div
+        class="text-left text-sm font-thin text-white mt-2 w-4/5 mx-auto"
+        id="submanu"
+      >
+        <h1 class="cursor-pointer p-2 hover:bg-gray-400 rounded-md mt-1">
+          Earnings
+        </h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-400 rounded-md mt-1">
+          Refunds
+        </h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-400 rounded-md mt-1">
+          Declines
+        </h1>
+        <h1 class="cursor-pointer p-2 hover:bg-gray-400 rounded-md mt-1">
+          Payouts
+        </h1>
+      </div>
+      <div class="text-white mt-10 ps-9">Settings</div>
+      <div class="flex items-center ps-9 mt-6 gap-4">
+        <i class="fa-solid fa-bell" style="color: #f4f5f6"></i>
+        <div class="text-white text-[20px]">Notification</div>
+      </div>
+      <div
+        class="p-2.5 ps-9 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-400 text-white"
+      >
+        <i class="fa-solid fa-gear" style="color: #f5f5f5"></i>
+        <div class="flex justify-between w-full items-center">
+          <span class="text-[20px] ml-4 text-gray-200">Settings</span>
+          <span class="text-sm rotate-180" id="arrow"></span>
+          <i class="fa-solid fa-chevron-down" style="color: #f7f7f8"></i>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function dropdown() {
+        document.querySelector("#submanu").classList.toggle("hidden");
+        document.querySelector("#arrow").classList.toggle("rotate-0");
+      }
+    </script>
+  </body>
+</html>
